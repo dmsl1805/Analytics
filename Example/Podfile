@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'DMSLAnalytics_Example' do
+  pod 'DMSLAnalytics', :path => '../'
+
+  target 'DMSLAnalytics_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
