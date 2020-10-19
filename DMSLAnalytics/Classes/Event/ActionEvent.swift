@@ -14,11 +14,11 @@ public struct ActionEvent: ParamsContainer {
     let isUrgent: Bool
     let states: Set<UIApplication.State>
     
-    init(name: String,
-         params: [String: Any] = [:],
-         isActive: Bool = true,
-         isUrgent: Bool = false,
-         states: Set<UIApplication.State> = [.active, .inactive]) {
+    public init(name: String,
+                params: [String: Any] = [:],
+                isActive: Bool = true,
+                isUrgent: Bool = false,
+                states: Set<UIApplication.State> = [.active, .inactive]) {
         self.name = name
         self.params = params
         self.isActive = isActive

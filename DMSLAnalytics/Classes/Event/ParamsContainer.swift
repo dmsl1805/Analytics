@@ -17,6 +17,7 @@ extension ParamsContainer {
         container.params = container.params.merging(params) { _, new in new }
         return container
     }
+    
     public func param(_ key: String, value: Any) -> Self {
         params([key: value])
     }
