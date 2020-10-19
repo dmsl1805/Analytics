@@ -22,7 +22,7 @@ pod 'DMSLAnalytics'
 
 ## Author
 
-dmsl1805, dmytro.shulzhenko@gen.tech
+dmsl1805, dmsl1805@gmail.com
 
 ## License
 
