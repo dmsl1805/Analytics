@@ -1,18 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="d2y-Ev-CbT">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Navigation Controller-->
+        <scene sceneID="mCr-Sp-04A">
+            <objects>
+                <navigationController id="yhJ-m3-nyV" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="y50-ex-4tJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="gql-II-s51"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ne2-DN-mru" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-822" y="131"/>
+        </scene>
+        <!--Auth-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="DMSLAnalytics_Example" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="AuthViewController" customModule="DMSLAnalytics_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -20,11 +35,308 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1aF-8O-3EE">
+                                <rect key="frame" x="171" y="112" width="32" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Next"/>
+                                <connections>
+                                    <segue destination="jXZ-83-fV7" kind="show" id="hQI-f4-ieX"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Auth" id="nRJ-2u-OPU"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-41" y="131"/>
+        </scene>
+        <!--Landing intro-->
+        <scene sceneID="rhX-pv-4p4">
+            <objects>
+                <viewController id="jXZ-83-fV7" customClass="LandingIntroViewController" customModule="DMSLAnalytics_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7OM-AF-M71"/>
+                        <viewControllerLayoutGuide type="bottom" id="A3o-io-M2A"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="es7-df-SAj">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="moR-P1-asC">
+                                <rect key="frame" x="171" y="100" width="32" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Next"/>
+                                <connections>
+                                    <segue destination="ezq-5X-vTg" kind="show" id="Vmi-4m-r0D"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Landing intro" id="lfD-Uq-tcE"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tFE-I7-mof" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="660" y="131"/>
+        </scene>
+        <!--Animation-->
+        <scene sceneID="3ab-Sd-KTv">
+            <objects>
+                <viewController id="ezq-5X-vTg" customClass="LandingAnimationViewController" customModule="DMSLAnalytics_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="YJM-Ar-m3T"/>
+                        <viewControllerLayoutGuide type="bottom" id="fnR-l2-kGJ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cUe-Xb-CTt">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6RL-eD-tMa">
+                                <rect key="frame" x="171" y="109" width="32" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Next"/>
+                                <connections>
+                                    <segue destination="Rtt-gv-UFf" kind="show" id="cfF-PC-dUX"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Animation" id="ffR-0q-a82"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pRN-58-ewT" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1369" y="131"/>
+        </scene>
+        <!--Payment-->
+        <scene sceneID="eyu-C7-Jag">
+            <objects>
+                <viewController id="Rtt-gv-UFf" customClass="PaymentViewController" customModule="DMSLAnalytics_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fYZ-Zv-ue4"/>
+                        <viewControllerLayoutGuide type="bottom" id="xWu-Xp-9Jg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="XvT-az-FPk">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qBf-jh-TAf">
+                                <rect key="frame" x="171" y="109" width="32" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Next"/>
+                                <connections>
+                                    <segue destination="d2y-Ev-CbT" kind="show" id="2pJ-oA-7mF"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Payment" id="Jmg-gT-PTO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EkF-vs-JdB" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2057" y="131"/>
+        </scene>
+        <!--Item 2-->
+        <scene sceneID="bcH-nc-ygN">
+            <objects>
+                <viewController id="Zpu-Cs-PYu" customClass="Tab2ViewController" customModule="DMSLAnalytics_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ITr-0t-ndu"/>
+                        <viewControllerLayoutGuide type="bottom" id="6vt-xC-YU0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="T9J-Jv-e12">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9sl-LL-Aio">
+                                <rect key="frame" x="180" y="112" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="0a6-nb-Ngg" kind="presentation" id="YpM-GC-VFy"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 2" id="QGg-jp-a34"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ddl-TD-hSK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3841" y="512"/>
+        </scene>
+        <!--Item 1-->
+        <scene sceneID="qEd-cy-2vy">
+            <objects>
+                <viewController id="Ygb-yp-AME" customClass="Tab1ViewController" customModule="DMSLAnalytics_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="p4O-zG-tfO"/>
+                        <viewControllerLayoutGuide type="bottom" id="wf8-2y-DnO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="h2O-nX-PAf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kKU-uI-3Pv">
+                                <rect key="frame" x="171" y="117" width="32" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Next"/>
+                                <connections>
+                                    <segue destination="ORL-D6-gGx" kind="presentation" id="fC7-SX-6Tu"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 1" id="G49-TH-pf7"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bJD-1u-DdQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3842" y="-173"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="0aM-aN-eS1">
+            <objects>
+                <tabBarController id="d2y-Ev-CbT" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="PfK-OE-iry"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ymq-Vy-MII">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Ygb-yp-AME" kind="relationship" relationship="viewControllers" id="V8R-T3-B37"/>
+                        <segue destination="Zpu-Cs-PYu" kind="relationship" relationship="viewControllers" id="riR-M0-otw"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fD0-6K-Jb8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2834" y="131"/>
+        </scene>
+        <!--Payment-->
+        <scene sceneID="LTd-hi-rTg">
+            <objects>
+                <viewController id="ORL-D6-gGx" customClass="OverviewFreeViewController" customModule="DMSLAnalytics_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="GLt-SS-Uab"/>
+                        <viewControllerLayoutGuide type="bottom" id="8E0-eg-PYI"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="IJu-VA-9mn">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s0z-6S-zjX">
+                                <rect key="frame" x="164" y="126" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="Efx-Dr-QPx" kind="show" id="NGK-Ln-FX1"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Payment" id="VhS-Li-GR3"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HXy-P1-Duw" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4516" y="-173"/>
+        </scene>
+        <!--Payment-->
+        <scene sceneID="Cde-L1-Gl3">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="Efx-Dr-QPx" customClass="SummaryViewController" customModule="DMSLAnalytics_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bvg-TH-0tP"/>
+                        <viewControllerLayoutGuide type="bottom" id="Pgy-GF-6D1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kbE-gk-DjY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5XL-wV-eAF">
+                                <rect key="frame" x="52" y="45" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="close" destination="Efx-Dr-QPx" eventType="touchUpInside" id="m1s-VB-WAR"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Payment" id="BEQ-OK-vKu"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mbf-oK-rD8" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5204" y="-173"/>
+        </scene>
+        <!--Payment-->
+        <scene sceneID="unW-I0-IeN">
+            <objects>
+                <viewController id="0a6-nb-Ngg" customClass="OverviewSummaryViewController" customModule="DMSLAnalytics_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="k07-Zj-aCA"/>
+                        <viewControllerLayoutGuide type="bottom" id="Z8r-FR-ba4"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ozr-qY-fS7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Ec-mE-1tD">
+                                <rect key="frame" x="164" y="126" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="YSd-ea-vLx" kind="show" id="zxB-1B-tDI"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Payment" id="sdF-zx-m0A"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="l88-Hc-MKl" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4516" y="511"/>
+        </scene>
+        <!--Payment-->
+        <scene sceneID="Gyi-wh-FvQ">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="YSd-ea-vLx" customClass="SummaryViewController" customModule="DMSLAnalytics_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Hk0-85-R5R"/>
+                        <viewControllerLayoutGuide type="bottom" id="Qi6-H4-o6r"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="exe-mK-ty4">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J0m-6E-ovU">
+                                <rect key="frame" x="52" y="45" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="close" destination="YSd-ea-vLx" eventType="touchUpInside" id="b3N-P1-KGJ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Payment" id="GWH-GG-H9c"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1yr-nS-n4L" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5225" y="511"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
