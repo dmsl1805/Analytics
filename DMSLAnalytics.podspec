@@ -29,7 +29,7 @@ TODO: description...
   s.ios.deployment_target = '10.0'
   s.swift_version = '4.0'
   
-  s.source_files = 'DMSLAnalytics/Classes/**/*'
+  s.source_files = 'DMSLAnalytics/Classes/**/*.swift'
   
   s.static_framework = true
   
