@@ -21,10 +21,10 @@ Pod::Spec.new do |s|
 TODO: description...
                        DESC
 
-  s.homepage         = 'https://github.com/dmsl1805/DMSLAnalytics'
+  s.homepage         = 'https://github.com/dmsl1805/Analytics'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'dmsl1805' => 'dmytro.shulzhenko@gen.tech' }
-  s.source           = { :git => 'https://github.com/dmsl1805/DMSLAnalytics.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/dmsl1805/Analytics.git', :tag => s.version.to_s }
 
   s.ios.deployment_target = '10.0'
 
