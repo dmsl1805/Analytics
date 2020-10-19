@@ -27,7 +27,7 @@ TODO: description...
   s.source           = { :git => 'https://github.com/dmsl1805/Analytics.git', :tag => s.version.to_s }
 
   s.ios.deployment_target = '10.0'
-  s.swift_version = '4.0'
+  s.swift_version = '5.0'
   
   s.source_files = 'DMSLAnalytics/Classes/**/*.swift'
   s.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
