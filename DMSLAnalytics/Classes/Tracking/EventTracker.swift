@@ -77,7 +77,8 @@ public final class EventTracker: EventTracking {
     }
     
     private func track(_ event: Event) {
-        guard event.states.contains(UIApplication.state()) else { return }
+        let applicationState = DispatchQueue.safeSyncOnMain(UIApplication.state)
+        guard event.states.contains(applicationState) else { return }
         trackers.forEach { $0.track(event: event) }
     }
     
