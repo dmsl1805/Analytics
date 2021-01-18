@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'DMSLAnalytics'
-  s.version          = '0.3.4'
+  s.version          = '0.3.5'
   s.summary          = 'TODO: summary...'
 
 # This description is used to generate tags and improve search results.
@@ -41,31 +41,37 @@ TODO: description...
   
   s.subspec 'Rx' do |ss|
     ss.source_files = 'DMSLAnalytics/Classes/Rx/**/*.swift'
+    ss.dependency 'DMSLAnalytics/Core'
     ss.dependency 'RxSwift'
     ss.dependency 'RxViewController'
   end
   
   s.subspec 'Firebase' do |ss|
     ss.source_files = 'DMSLAnalytics/Classes/Tracking/Firebase/**/*.swift'
+    ss.dependency 'DMSLAnalytics/Core'
     ss.dependency 'Firebase/Analytics'
   end
   
   s.subspec 'Facebook' do |ss|
     ss.source_files = 'DMSLAnalytics/Classes/Tracking/Facebook/**/*.swift'
+    ss.dependency 'DMSLAnalytics/Core'
     ss.dependency 'FBSDKCoreKit'
   end
   
   s.subspec 'Amplitude' do |ss|
     ss.source_files = 'DMSLAnalytics/Classes/Tracking/Amplitude/**/*.swift'
+    ss.dependency 'DMSLAnalytics/Core'
     ss.dependency 'Amplitude-iOS'
   end
   
   s.subspec 'AppsFlyer' do |ss|
     ss.source_files = 'DMSLAnalytics/Classes/Tracking/AppsFlyer/**/*.swift'
+    ss.dependency 'DMSLAnalytics/Core'
     ss.dependency 'AppsFlyerFramework'
   end
   
   s.subspec 'Debug' do |ss|
+    ss.dependency 'DMSLAnalytics/Core'
     ss.source_files = 'DMSLAnalytics/Classes/Tracking/Debug/**/*.swift'
   end
   
