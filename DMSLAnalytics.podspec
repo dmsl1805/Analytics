@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'DMSLAnalytics'
-  s.version          = '0.3.5'
+  s.version          = '0.3.6'
   s.summary          = 'TODO: summary...'
 
 # This description is used to generate tags and improve search results.
@@ -49,6 +49,7 @@ TODO: description...
   s.subspec 'Firebase' do |ss|
     ss.source_files = 'DMSLAnalytics/Classes/Tracking/Firebase/**/*.swift'
     ss.dependency 'DMSLAnalytics/Core'
+    ss.dependency 'Firebase/Core'
     ss.dependency 'Firebase/Analytics'
   end
   
