@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'DMSLAnalytics'
-  s.version          = '0.3.3'
+  s.version          = '0.3.4'
   s.summary          = 'TODO: summary...'
 
 # This description is used to generate tags and improve search results.
@@ -28,19 +28,45 @@ TODO: description...
 
   s.ios.deployment_target = '10.0'
   s.swift_version = '5.0'
-  
-  s.source_files = 'DMSLAnalytics/Classes/**/*.swift'
+    
   s.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
   s.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
     
   s.static_framework = true
   
-  s.dependency 'Firebase/Analytics'
-  s.dependency 'FBSDKCoreKit'
-  s.dependency 'Amplitude-iOS'
-  s.dependency 'AppsFlyerFramework'
-  s.dependency 'Tagged'
-  s.dependency 'RxSwift'
-  s.dependency 'RxViewController'
-
+  s.subspec 'Core' do |ss|
+    ss.source_files = 'DMSLAnalytics/Classes/Core/**/*.swift'
+    ss.dependency 'Tagged'
+  end
+  
+  s.subspec 'Rx' do |ss|
+    ss.source_files = 'DMSLAnalytics/Classes/Rx/**/*.swift'
+    ss.dependency 'RxSwift'
+    ss.dependency 'RxViewController'
+  end
+  
+  s.subspec 'Firebase' do |ss|
+    ss.source_files = 'DMSLAnalytics/Classes/Tracking/Firebase/**/*.swift'
+    ss.dependency 'Firebase/Analytics'
+  end
+  
+  s.subspec 'Facebook' do |ss|
+    ss.source_files = 'DMSLAnalytics/Classes/Tracking/Facebook/**/*.swift'
+    ss.dependency 'FBSDKCoreKit'
+  end
+  
+  s.subspec 'Amplitude' do |ss|
+    ss.source_files = 'DMSLAnalytics/Classes/Tracking/Amplitude/**/*.swift'
+    ss.dependency 'Amplitude-iOS'
+  end
+  
+  s.subspec 'AppsFlyer' do |ss|
+    ss.source_files = 'DMSLAnalytics/Classes/Tracking/AppsFlyer/**/*.swift'
+    ss.dependency 'AppsFlyerFramework'
+  end
+  
+  s.subspec 'Debug' do |ss|
+    ss.source_files = 'DMSLAnalytics/Classes/Tracking/Debug/**/*.swift'
+  end
+  
 end

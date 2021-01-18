@@ -18,11 +18,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                      didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
         EventTracker.default.setTrackers(
-//            AmplitudeTracker(apiKey: ""),
-//            AppsflyerTracker(appleAppID: "", appsFlyerDevKey: ""),
-//            FacebookTracker(),
-//            FirebaseTracker(),
-//            DebugNotificationTracker(),
+            AmplitudeTracker(apiKey: ""),
+            AppsflyerTracker(appleAppID: "", appsFlyerDevKey: ""),
+            FacebookTracker(),
+            FirebaseTracker(),
+            DebugNotificationTracker(),
             DebugConsoleTracker()
         )
         

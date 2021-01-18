@@ -1,14 +1,28 @@
 PODS:
   - Amplitude-iOS (4.10.0)
   - AppsFlyerFramework (6.0.5)
-  - DMSLAnalytics (0.3.2):
+  - DMSLAnalytics (0.3.3):
+    - DMSLAnalytics/Amplitude (= 0.3.3)
+    - DMSLAnalytics/AppsFlyer (= 0.3.3)
+    - DMSLAnalytics/Core (= 0.3.3)
+    - DMSLAnalytics/Debug (= 0.3.3)
+    - DMSLAnalytics/Facebook (= 0.3.3)
+    - DMSLAnalytics/Firebase (= 0.3.3)
+    - DMSLAnalytics/Rx (= 0.3.3)
+  - DMSLAnalytics/Amplitude (0.3.3):
     - Amplitude-iOS
+  - DMSLAnalytics/AppsFlyer (0.3.3):
     - AppsFlyerFramework
+  - DMSLAnalytics/Core (0.3.3):
+    - Tagged
+  - DMSLAnalytics/Debug (0.3.3)
+  - DMSLAnalytics/Facebook (0.3.3):
     - FBSDKCoreKit
+  - DMSLAnalytics/Firebase (0.3.3):
     - Firebase/Analytics
+  - DMSLAnalytics/Rx (0.3.3):
     - RxSwift
     - RxViewController
-    - Tagged
   - FBSDKCoreKit (8.0.0):
     - FBSDKCoreKit/Basics (= 8.0.0)
     - FBSDKCoreKit/Core (= 8.0.0)
@@ -120,7 +134,7 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   Amplitude-iOS: 7d8cdc3408ba35c2e68368fc7c692cd104606b94
   AppsFlyerFramework: 3ae29222e2cb7d11cd176c71c780542979eb0c08
-  DMSLAnalytics: 621d7f2ecf8ee5495a9527161c653f9666aa9c87
+  DMSLAnalytics: 07921f8b140273e8fc589b06cd16e63ef9574591
   FBSDKCoreKit: 9d27fe97a2fa2abe5eeefea8240e837623ab88e0
   Firebase: c23a36d9e4cdf7877dfcba8dd0c58add66358999
   FirebaseAnalytics: 3bb096873ee0d7fa4b6c70f5e9166b6da413cc7f
