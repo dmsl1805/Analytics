@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import Amplitude_iOS
+import Amplitude
 
 public final class AmplitudeTracker: EventTrackingProxy {
     private let client: Amplitude
@@ -15,7 +15,7 @@ public final class AmplitudeTracker: EventTrackingProxy {
                 apiKey: String,
                 eventUploadThreshold: Int32 = 3,
                 eventUploadPeriodSeconds: Int32 = 5) {
-        client = custom.map { Amplitude.instance(withName: $0.name)! } ?? .instance()!
+        client = custom.map { Amplitude.instance(withName: $0.name) } ?? .instance()
         custom.map { client.setServerUrl($0.url) }
         client.initializeApiKey(apiKey)
         client.eventUploadThreshold = eventUploadThreshold

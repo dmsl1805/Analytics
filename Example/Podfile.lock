@@ -1,26 +1,33 @@
 PODS:
-  - Amplitude-iOS (4.10.0)
+  - Amplitude (7.2.2)
   - AppsFlyerFramework (6.0.5)
-  - DMSLAnalytics (0.3.3):
-    - DMSLAnalytics/Amplitude (= 0.3.3)
-    - DMSLAnalytics/AppsFlyer (= 0.3.3)
-    - DMSLAnalytics/Core (= 0.3.3)
-    - DMSLAnalytics/Debug (= 0.3.3)
-    - DMSLAnalytics/Facebook (= 0.3.3)
-    - DMSLAnalytics/Firebase (= 0.3.3)
-    - DMSLAnalytics/Rx (= 0.3.3)
-  - DMSLAnalytics/Amplitude (0.3.3):
-    - Amplitude-iOS
-  - DMSLAnalytics/AppsFlyer (0.3.3):
+  - DMSLAnalytics (0.3.7):
+    - DMSLAnalytics/Amplitude (= 0.3.7)
+    - DMSLAnalytics/AppsFlyer (= 0.3.7)
+    - DMSLAnalytics/Core (= 0.3.7)
+    - DMSLAnalytics/Debug (= 0.3.7)
+    - DMSLAnalytics/Facebook (= 0.3.7)
+    - DMSLAnalytics/Firebase (= 0.3.7)
+    - DMSLAnalytics/Rx (= 0.3.7)
+  - DMSLAnalytics/Amplitude (0.3.7):
+    - Amplitude
+    - DMSLAnalytics/Core
+  - DMSLAnalytics/AppsFlyer (0.3.7):
     - AppsFlyerFramework
-  - DMSLAnalytics/Core (0.3.3):
+    - DMSLAnalytics/Core
+  - DMSLAnalytics/Core (0.3.7):
     - Tagged
-  - DMSLAnalytics/Debug (0.3.3)
-  - DMSLAnalytics/Facebook (0.3.3):
+  - DMSLAnalytics/Debug (0.3.7):
+    - DMSLAnalytics/Core
+  - DMSLAnalytics/Facebook (0.3.7):
+    - DMSLAnalytics/Core
     - FBSDKCoreKit
-  - DMSLAnalytics/Firebase (0.3.3):
+  - DMSLAnalytics/Firebase (0.3.7):
+    - DMSLAnalytics/Core
     - Firebase/Analytics
-  - DMSLAnalytics/Rx (0.3.3):
+    - Firebase/Core
+  - DMSLAnalytics/Rx (0.3.7):
+    - DMSLAnalytics/Core
     - RxSwift
     - RxViewController
   - FBSDKCoreKit (8.0.0):
@@ -108,7 +115,7 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
-    - Amplitude-iOS
+    - Amplitude
     - AppsFlyerFramework
     - FBSDKCoreKit
     - Firebase
@@ -132,9 +139,9 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  Amplitude-iOS: 7d8cdc3408ba35c2e68368fc7c692cd104606b94
+  Amplitude: 517cdc7c485bda64b685174426ecbf17746eb16a
   AppsFlyerFramework: 3ae29222e2cb7d11cd176c71c780542979eb0c08
-  DMSLAnalytics: 07921f8b140273e8fc589b06cd16e63ef9574591
+  DMSLAnalytics: 429dd7c859a365bffbb739490006685aa234dce6
   FBSDKCoreKit: 9d27fe97a2fa2abe5eeefea8240e837623ab88e0
   Firebase: c23a36d9e4cdf7877dfcba8dd0c58add66358999
   FirebaseAnalytics: 3bb096873ee0d7fa4b6c70f5e9166b6da413cc7f
@@ -154,4 +161,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: 4cc9ab232abdefcc11429cc1c0b36ec3bd9d35cb
 
-COCOAPODS: 1.9.3
+COCOAPODS: 1.10.1
