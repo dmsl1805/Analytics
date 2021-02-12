@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'DMSLAnalytics'
-  s.version          = '0.3.6'
+  s.version          = '0.3.7'
   s.summary          = 'TODO: summary...'
 
 # This description is used to generate tags and improve search results.
@@ -62,7 +62,7 @@ TODO: description...
   s.subspec 'Amplitude' do |ss|
     ss.source_files = 'DMSLAnalytics/Classes/Tracking/Amplitude/**/*.swift'
     ss.dependency 'DMSLAnalytics/Core'
-    ss.dependency 'Amplitude-iOS'
+    ss.dependency 'Amplitude'
   end
   
   s.subspec 'AppsFlyer' do |ss|
