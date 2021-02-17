@@ -77,9 +77,9 @@ public final class EventTracker: EventTracking {
     }
     
     private func track(_ event: Event) {
-        let applicationState = DispatchQueue.safeSyncOnMain(UIApplication.state)
-        guard event.states.contains(applicationState) else { return }
-        trackers.forEach { $0.track(event: event) }
+        trackers.forEach {
+            $0.track(event: event)
+        }
     }
     
     private func event(action event: ActionEvent) -> Event {
@@ -87,8 +87,7 @@ public final class EventTracker: EventTracking {
               context: currentContext,
               params: event.params,
               isActive: event.isActive,
-              isUrgent: event.isUrgent,
-              states: event.states)
+              isUrgent: event.isUrgent)
     }
     
     private func event(view event: ViewEvent, overrideContext: Bool) -> Event {
@@ -96,8 +95,7 @@ public final class EventTracker: EventTracking {
               context: overrideContext ? event.context : currentContext,
               params: event.params,
               isActive: event.isActive,
-              isUrgent: event.isUrgent,
-              states: event.states)
+              isUrgent: event.isUrgent)
     }
 }
 

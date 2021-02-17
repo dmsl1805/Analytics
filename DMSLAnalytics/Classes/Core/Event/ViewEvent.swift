@@ -5,7 +5,7 @@
 //  Created by Dmytro Shulzhenko on 17.10.2020.
 //
 
-import UIKit
+import Foundation
 
 public struct ViewEvent: ParamsContainer {
     let name: String
@@ -13,32 +13,27 @@ public struct ViewEvent: ParamsContainer {
     public var params: [String: Any]
     let isActive: Bool
     let isUrgent: Bool
-    let states: Set<UIApplication.State>
     
     public init(context: Event.Context,
                 params: [String: Any] = [:],
                 isActive: Bool = true,
-                isUrgent: Bool = false,
-                states: Set<UIApplication.State> = [.active, .inactive]) {
+                isUrgent: Bool = false) {
         self.init(name: context.rawValue,
                   context: context,
                   params: params,
                   isActive: isActive,
-                  isUrgent: isUrgent,
-                  states: states)
+                  isUrgent: isUrgent)
     }
     
     public init(name: String,
                 context: Event.Context,
                 params: [String: Any] = [:],
                 isActive: Bool = true,
-                isUrgent: Bool = false,
-                states: Set<UIApplication.State> = [.active, .inactive]) {
+                isUrgent: Bool = false) {
         self.name = "\(name)_view"
         self.context = context
         self.params = params
         self.isActive = isActive
         self.isUrgent = isUrgent
-        self.states = states
     }
 }

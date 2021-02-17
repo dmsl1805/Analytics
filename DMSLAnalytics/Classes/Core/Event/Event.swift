@@ -5,7 +5,7 @@
 //  Created by Dmytro Shulzhenko on 15.10.2020.
 //
 
-import UIKit
+import Foundation
 import Tagged
 
 public struct Event {
@@ -19,19 +19,16 @@ public struct Event {
     private (set) var params: [String: Any]
     let isActive: Bool
     let isUrgent: Bool
-    let states: Set<UIApplication.State>
     
     init(name: String,
          context: Context,
          params: [String: Any] = [:],
          isActive: Bool = true,
-         isUrgent: Bool,
-         states: Set<UIApplication.State> = [.active, .inactive]) {
+         isUrgent: Bool) {
         self.name = name
         self.params = params
         self.isActive = isActive
         self.isUrgent = isUrgent
-        self.states = states
         
         self.params[Key.context.rawValue] = context.rawValue
     }
